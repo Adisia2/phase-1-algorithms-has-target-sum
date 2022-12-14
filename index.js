@@ -1,6 +1,22 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+  const theArray = array.sort((x,y)=>x-y);
+  let left = 0;
+  let right = theArray.length - 1;
+  while (left<right){
+    const sum = theArray[left]+theArray[right];
+    if (sum===target){
+      return true ; }else if (sum < target){
+        left ++ }else{
+          right --;
+        
+        }
+      }
+      return false;
+    }
+    
+  
+
 
 /* 
   Write the Big O time complexity of your function here
